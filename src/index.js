@@ -2,7 +2,9 @@ import React, { Component, Fragment } from 'react';
 import { render } from 'react-dom';
 import Button from './Button';
 
-class App extends Component {
+import "./style.css";
+
+class App extends Component { 
     state = {
         counter: 0
     };
@@ -29,8 +31,8 @@ class App extends Component {
         console.log("Render...")
         return (
             <Fragment>
-                <h1>Hello Rocketseat!</h1>
-                <h2>{this.state.counter}</h2>
+                <h1 className="title">Hello Rocketseat!</h1>
+                <h2 style={{ color: "#f00" }}>{this.state.counter}</h2>
                 <Button onClick={() => { alert("Button 1")}}>Salvar</Button>
                 <Button onClick={this.handleClick}>Enviar</Button>
             </Fragment>
